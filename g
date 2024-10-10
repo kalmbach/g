@@ -136,7 +136,7 @@ pull() {
     git switch "$branch"
   fi
 
-  gum spin --title "pulling $branch" -- git pull origin "$branch"
+  gum spin --title "pulling $branch" --show-output -- git pull origin "$branch"
 }
 
 push() {
@@ -156,7 +156,7 @@ push() {
     git switch "$branch"
   fi 
 
-  gum spin --title "pushing $branch" -- git push --force-with-lease origin "$branch"
+  gum spin --title "pushing $branch" --show-output -- git push --force-with-lease origin "$branch"
 }
 
 add() {
